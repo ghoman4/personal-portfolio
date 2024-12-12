@@ -1,11 +1,12 @@
 import React from "react";
 
-const Projects: React.FC = () => {
+const Header: React.FC = () => {
 
     return (
         <div>
+
         </div>
     );
 }
 
-export default Projects;
+export default Header;
