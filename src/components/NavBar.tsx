@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import "../styles/components/NavBar.scss";
 
 export enum CurrentPage {
     HOME = 'HOME',

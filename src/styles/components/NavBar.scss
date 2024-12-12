@@ -1,0 +1,131 @@
+@import "../../App.scss";
+
+// Navbar
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem $page-padding;
+  background-color: $background-light;
+  height: $navbar-height;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+
+  // Logo Section
+  .navbar__logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $primary-light;
+    @include glow($primary);
+    transition: text-shadow 0.15s ease-in-out, font-size 0.15s ease-in-out;
+
+    &:hover {
+      @include glow($primary-dark, $primary-dark);
+      font-size: 1.52rem;
+    }
+  }
+
+  // Links Section (desktop)
+  .navbar__links {
+    display: flex;
+    gap: 1.5rem;
+
+    a {
+      text-decoration: none;
+      color: $gray2;
+      font-size: 1rem;
+      text-transform: uppercase;
+      position: relative;
+      transition: color 0.3s ease;
+
+      &.active,
+      &:hover {
+        color: $primary;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 0; // Initial width is 0
+        height: 2px;
+        background: $primary;
+        bottom: -4px;
+        left: 0;
+        transition: width 0.3s ease; // Animate the underline
+      }
+
+      &:hover::after,
+      &.active::after {
+        width: 100%; // Expand underline on hover or active state
+      }
+    }
+  }
+
+  // Mobile Menu Icon
+  .navbar__menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 2000;
+    color: $gray2;
+    transition: color 0.1s ease-in-out;
+
+    &:hover {
+      color: $gray1;
+    }
+  }
+
+  @media (max-width: $medium-screen-width) {
+    .navbar__menu-icon {
+      display: block;
+    }
+
+    .navbar__links {
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      width: 300px;
+      background-color: $background-light;
+      box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+      padding: 100px 2rem 0 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center; // Center the links
+      gap: 1.5rem;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+      z-index: 1000;
+    }
+
+    .navbar__links.active {
+      transform: translateX(0);
+    }
+
+    .navbar__links a {
+      font-size: 1.3rem;
+      font-weight: 500;
+      text-align: center; // Ensure centered text
+
+      &::after {
+        left: 50%; // Center the underline
+        transform: translateX(-50%) scaleX(0); // Initial state: centered and hidden
+        transform-origin: center;
+        transition: transform 0.3s ease-in-out; // Smooth animation
+      }
+
+      &:hover::after,
+      &.active::after {
+        transform: translateX(-50%) scaleX(1); // Expand underline only under the text
+      }
+
+      &:hover {
+        color: darken($primary-dark, 10%);
+      }
+    }
+  }
+}
