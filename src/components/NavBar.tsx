@@ -45,46 +45,48 @@ const NavBar: React.FC<Props> = ({ active }) => {
 
     return (
         <nav className="navbar">
-            {/* Logo Section */}
-            <div className="navbar__logo">
-                <Link to="/">Griffin Homan</Link>
-            </div>
+            <div className="container">
+                {/* Logo Section */}
+                <div className="navbar__logo">
+                    <Link to="/">Griffin Homan</Link>
+                </div>
 
-            {/* Links Section */}
-            <div className={`navbar__links ${menuOpen ? "active" : ""}`}>
-                <Link
-                    to="/"
-                    onClick={closeMenu}
-                    className={active === CurrentPage.HOME ? "active" : ""}
-                >
-                    Home
-                </Link>
-                <Link
-                    to="/projects"
-                    onClick={closeMenu}
-                    className={active === CurrentPage.PROJECTS ? "active" : ""}
-                >
-                    Projects
-                </Link>
-                <Link
-                    to="/about"
-                    onClick={closeMenu}
-                    className={active === CurrentPage.ABOUT ? "active" : ""}
-                >
-                    About
-                </Link>
-                <Link
-                    to="/contact"
-                    onClick={closeMenu}
-                    className={active === CurrentPage.CONTACT ? "active" : ""}
-                >
-                    Contact
-                </Link>
-            </div>
+                {/* Links Section */}
+                <div className={`navbar__links ${menuOpen ? "active" : ""}`}>
+                    <Link
+                        to="/"
+                        onClick={closeMenu}
+                        className={active === CurrentPage.HOME ? "active" : ""}
+                    >
+                        Home
+                    </Link>
+                    <Link
+                        to="/projects"
+                        onClick={closeMenu}
+                        className={active === CurrentPage.PROJECTS ? "active" : ""}
+                    >
+                        Projects
+                    </Link>
+                    <Link
+                        to="/about"
+                        onClick={closeMenu}
+                        className={active === CurrentPage.ABOUT ? "active" : ""}
+                    >
+                        About
+                    </Link>
+                    <Link
+                        to="/contact"
+                        onClick={closeMenu}
+                        className={active === CurrentPage.CONTACT ? "active" : ""}
+                    >
+                        Contact
+                    </Link>
+                </div>
 
-            {/* Mobile Menu Icon */}
-            <div className="navbar__menu-icon" onClick={toggleMenu}>
-                {menuOpen ? "✖" : "☰"}
+                {/* Mobile Menu Icon */}
+                <div className="navbar__menu-icon" onClick={toggleMenu}>
+                    {menuOpen ? "✖" : "☰"}
+                </div>
             </div>
         </nav>
     );

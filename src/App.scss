@@ -32,20 +32,18 @@ $porchfest-light:     #49D162;
 $small-screen-width:  600px;
 $medium-screen-width: 900px;
 
-$navbar-height:       50px;
-$page-padding:        calc(25px + 3%);
+$max-screen-width:    2000px;
+
+$navbar-height:       60px;
+$page-padding:        calc(30px + 5%);
 
 // Global Styles
 html, body {
   background-color: $background;
   margin: 0;
   padding: 0;
-}
-
-.App {
   display: flex;
   justify-content: center;
-  text-align: center;
 }
 
 h1, h2, h3, h4 {
