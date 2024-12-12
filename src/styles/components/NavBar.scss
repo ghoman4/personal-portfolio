@@ -27,12 +27,11 @@
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
-    color: $primary-light;
-    @include glow($primary);
+    color: $white;
     transition: text-shadow 0.15s ease-in-out, font-size 0.15s ease-in-out;
 
     &:hover {
-      @include glow($primary-dark, $primary-dark);
+      @include apply-glow("color", $gray2);
       font-size: 1.52rem;
     }
   }

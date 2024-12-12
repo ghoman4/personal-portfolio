@@ -1,6 +1,5 @@
 import React from "react";
 import "../../styles/components/HeroSection.scss";
-import epicMain from "../../assets/epic-main.png";
 
 const HeroSection: React.FC = () => {
     return (
@@ -14,9 +13,6 @@ const HeroSection: React.FC = () => {
                         always seeking new challenges to build impactful, scalable solutions.
                     </p>
                     <button className="hero__button">Contact Me</button>
-                </div>
-                <div className="hero__image">
-                    <img src={epicMain} alt="Griffin working"/>
                 </div>
             </div>
         </section>

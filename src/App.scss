@@ -4,7 +4,7 @@
 
 // Variables
 $background:          #0E0E0E;
-$background-light:    #1a1a1a;
+$background-light: #181818;
 
 $white:               #FFFFFF;
 $gray1:               #CCCCCC;
@@ -44,6 +44,7 @@ html, body {
   padding: 0;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 h1, h2, h3, h4 {
@@ -56,7 +57,6 @@ h5, h6, p {
   color: $gray2;
 }
 
-// Reusable Glow Function and Mixin
 @function glow($colors...) {
   $text-shadows: ();
   $index: 1;
@@ -76,7 +76,19 @@ h5, h6, p {
   @return $text-shadows;
 }
 
-@mixin glow($colors...) {
-  text-shadow: glow($colors...);
-  animation: glow 1.5s infinite alternate;
+@mixin apply-glow($type: "color", $colors...) {
+  @if $type == "color" {
+    text-shadow: #{glow($colors...)}; // Properly invoke the glow function
+  } @else if $type == "background-color" {
+    box-shadow: #{glow($colors...)}; // Properly invoke the glow function
+  } @else if $type == "border-color" {
+    border: 1px solid nth($colors, 1);
+    box-shadow: #{glow($colors...)}; // Properly invoke the glow function
+  } @else {
+    @warn "Unsupported type #{$type}. Defaulting to text-shadow.";
+    text-shadow: #{glow($colors...)}; // Properly invoke the glow function
+  }
 }
+
+
+
