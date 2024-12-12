@@ -1,5 +1,29 @@
 // Variables
-$background:        #0E0E0E;
+$background:          #0E0E0E;
+$white:               #FFFFFF;
+
+$gray1:               #AAAAAA;
+$gray2:               #1D1D1D;
+
+$primary-dark:        #397D7E;
+$primary:             #3F8A8B;
+$primary-light:       #5AB1B3;
+
+$secondary-dark:      #9A609A;
+$secondary:           #BC6AB9;
+$secondary-light:     #DD75D8;
+
+$localify-dark:       #B32F47;
+$localify-light:      #E65670;
+$localify:            #E84865;
+
+$charity-tree-dark:   #D38012;
+$charity-tree:        #F49416;
+$charity-tree-light:  #FFB451;
+
+$porchfest-dark:      #3A5A40;
+$porchfest-light:     #49D162;
+
 
 html, body {
   background-color: $background;
