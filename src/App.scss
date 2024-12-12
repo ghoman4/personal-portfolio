@@ -34,3 +34,42 @@ html, body {
   justify-content: center;
   text-align: center;
 }
+
+//Default text color
+h1, h2, h3, h4, h5, h6 {
+  color: $white;
+}
+
+p {
+  color: $gray1;
+}
+
+//Make text glow
+@function glow($colors...) {
+  $text-shadows: ();
+  $index: 1;
+
+  @each $color in $colors {
+    @if $index == 1 {
+      $text-shadows: append($text-shadows, 0 0 5px #{$color}, comma);
+    } @else if $index == 2 {
+      $text-shadows: append($text-shadows, 0 0 10px #{$color}, comma);
+    } @else {
+      $text-shadows: append($text-shadows, 0 0 20px #{$color}, comma);
+    }
+
+    $index: $index + 1;
+  }
+
+  @return $text-shadows;
+}
+
+@mixin glow($colors...) {
+  text-shadow: glow($colors...);
+  animation: glow 1.5s infinite alternate;
+}
+
+.glow-white {
+  @include glow($white, $white);
+}
+
