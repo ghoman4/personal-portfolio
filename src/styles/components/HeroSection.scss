@@ -5,10 +5,10 @@
   display: flex;
   justify-content: center;
   background-color: $background;
-  padding: 5rem $page-padding;
 
   .container {
     max-width: $max-screen-width;
+    padding: 5rem $page-padding;
     width: 100%;
     display: flex;
     justify-content: space-between;
