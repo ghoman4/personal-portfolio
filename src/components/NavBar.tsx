@@ -1,7 +1,19 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
-const NavBar: React.FC = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
+export enum CurrentPage {
+    HOME = 'HOME',
+    PROJECTS = 'PROJECTS',
+    ABOUT = 'ABOUT',
+    CONTACT = 'CONTACT'
+}
+
+type Props = {
+    active: CurrentPage;
+}
+
+const NavBar: React.FC<Props> = ({ active }) => {
+    const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -32,20 +44,44 @@ const NavBar: React.FC = () => {
 
     return (
         <nav className="navbar">
-            {/* Left Section: Logo */}
+            {/* Logo Section */}
             <div className="navbar__logo">
-                <a href="#home">My Brand</a>
+                <Link to="/">Griffin Homan</Link>
             </div>
 
-            {/* Right Section: Links */}
+            {/* Links Section */}
             <div className={`navbar__links ${menuOpen ? "active" : ""}`}>
-                <a href="#home" onClick={closeMenu}>Home</a>
-                <a href="#projects" onClick={closeMenu}>Projects</a>
-                <a href="#about" onClick={closeMenu}>About</a>
-                <a href="#contact" className="active" onClick={closeMenu}>Contact</a>
+                <Link
+                    to="/"
+                    onClick={closeMenu}
+                    className={active === CurrentPage.HOME ? "active" : ""}
+                >
+                    Home
+                </Link>
+                <Link
+                    to="/projects"
+                    onClick={closeMenu}
+                    className={active === CurrentPage.PROJECTS ? "active" : ""}
+                >
+                    Projects
+                </Link>
+                <Link
+                    to="/about"
+                    onClick={closeMenu}
+                    className={active === CurrentPage.ABOUT ? "active" : ""}
+                >
+                    About
+                </Link>
+                <Link
+                    to="/contact"
+                    onClick={closeMenu}
+                    className={active === CurrentPage.CONTACT ? "active" : ""}
+                >
+                    Contact
+                </Link>
             </div>
 
-            {/* Hamburger Menu Icon */}
+            {/* Mobile Menu Icon */}
             <div className="navbar__menu-icon" onClick={toggleMenu}>
                 {menuOpen ? "✖" : "☰"}
             </div>

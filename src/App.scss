@@ -1,13 +1,13 @@
-//Imports
+// Imports
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 // Variables
 $background:          #0E0E0E;
-$white:               #FFFFFF;
+$background-light:    #1a1a1a;
 
+$white:               #FFFFFF;
 $gray1:               #AAAAAA;
-$gray2:               #1D1D1D;
 
 $primary-dark:        #397D7E;
 $primary:             #3F8A8B;
@@ -32,10 +32,13 @@ $small-screen-width:  600px;
 $medium-screen-width: 900px;
 
 $navbar-height:       50px;
+$page-padding:        calc(25px + 3%);
 
-
+// Global Styles
 html, body {
   background-color: $background;
+  margin: 0;
+  padding: 0;
 }
 
 .App {
@@ -44,24 +47,17 @@ html, body {
   text-align: center;
 }
 
-//Default text color
-h1, h2, h3, h4, h5, h6 {
-  color: $white;
-}
-
-p {
-  color: $gray1;
-}
-
 h1, h2, h3, h4 {
   font-family: "Orbitron", sans-serif;
+  color: $white;
 }
 
 h5, h6, p {
   font-family: "Poppins", sans-serif;
+  color: $gray1;
 }
 
-//Make text glow
+// Reusable Glow Function and Mixin
 @function glow($colors...) {
   $text-shadows: ();
   $index: 1;
@@ -86,17 +82,13 @@ h5, h6, p {
   animation: glow 1.5s infinite alternate;
 }
 
-.glow-white {
-  @include glow($white, $white);
-}
-
-// Navbar Container
+// Navbar
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: $background;
+  padding: 1rem $page-padding;
+  background-color: $background-light;
   height: $navbar-height;
   position: sticky;
   top: 0;
@@ -109,12 +101,13 @@ h5, h6, p {
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
-    color: $primary;
-    transition: color 0.3s;
-
+    color: $primary-light;
+    @include glow($primary);
+    transition: text-shadow 0.15s ease-in-out, font-size 0.15s ease-in-out;
 
     &:hover {
-      color: darken($primary, 10%);
+      @include glow($primary, $primary);
+      font-size: 1.52rem;
     }
   }
 
@@ -162,9 +155,10 @@ h5, h6, p {
     font-size: 1.5rem;
     cursor: pointer;
     z-index: 2000;
+    color: $gray1;
   }
 
-  @media (max-width: $small-screen-width) {
+  @media (max-width: $medium-screen-width) {
     .navbar__menu-icon {
       display: block;
     }
@@ -175,26 +169,24 @@ h5, h6, p {
       right: 0;
       height: 100vh;
       width: 300px;
-      background-color: $white;
+      background-color: $background-light;
       box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
       padding: 100px 2rem 0 2rem;
       display: flex;
       flex-direction: column;
       gap: 1rem;
-      transform: translateX(100%); // Initially off-screen
+      transform: translateX(100%);
       transition: transform 0.3s ease-in-out;
-      z-index: 1000; // Ensure it slides over the main content
+      z-index: 1000;
     }
 
     .navbar__links.active {
-      transform: translateX(0); // Slide in from the right
+      transform: translateX(0);
     }
 
-    // Links inside the sliding navbar
     .navbar__links a {
       font-size: 1.2rem;
       color: $primary-dark;
-
 
       &:hover {
         color: darken($primary-dark, 10%);
