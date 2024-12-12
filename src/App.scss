@@ -24,6 +24,8 @@ $charity-tree-light:  #FFB451;
 $porchfest-dark:      #3A5A40;
 $porchfest-light:     #49D162;
 
+$header-height: 50px;
+
 
 html, body {
   background-color: $background;
@@ -73,3 +75,114 @@ p {
   @include glow($white, $white);
 }
 
+// Navbar Container
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: $white;
+  height: 60px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+
+  // Logo Section
+  .navbar__logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $primary-dark;
+    transition: color 0.3s;
+
+    &:hover {
+      color: darken($primary-dark, 10%);
+    }
+  }
+
+  // Links Section (desktop)
+  .navbar__links {
+    display: flex;
+    gap: 1.5rem;
+
+    a {
+      text-decoration: none;
+      color: $gray1;
+      font-size: 1rem;
+      text-transform: uppercase;
+      position: relative;
+      transition: color 0.3s ease;
+
+      &.active,
+      &:hover {
+        color: $primary;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: $primary;
+        bottom: -4px;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease;
+      }
+
+      &:hover::after,
+      &.active::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  // Mobile Menu Icon
+  .navbar__menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 2000; // Ensure it stays on top of the sliding navbar
+  }
+
+  // Responsive Styles
+  @media (max-width: 768px) {
+    .navbar__menu-icon {
+      display: block;
+    }
+
+    .navbar__links {
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      width: 300px;
+      background-color: $white;
+      box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+      padding: 100px 2rem 0 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      transform: translateX(100%); // Initially off-screen
+      transition: transform 0.3s ease-in-out;
+      z-index: 1000; // Ensure it slides over the main content
+    }
+
+    .navbar__links.active {
+      transform: translateX(0); // Slide in from the right
+    }
+
+    // Links inside the sliding navbar
+    .navbar__links a {
+      font-size: 1.2rem;
+      color: $primary-dark;
+
+      &:hover {
+        color: darken($primary-dark, 10%);
+      }
+    }
+  }
+}

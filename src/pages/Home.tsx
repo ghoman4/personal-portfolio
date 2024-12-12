@@ -1,12 +1,13 @@
 import React from "react";
+import NavBar from "../components/NavBar";
 
 const Home: React.FC = () => {
 
     return (
         <div>
-            <h1 className="glow-white">Did it work? Am I smart??</h1>
+            <NavBar />
         </div>
-    )
+    );
 }
 
 export default Home;
