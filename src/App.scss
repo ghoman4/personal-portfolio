@@ -1,3 +1,7 @@
+//Imports
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 // Variables
 $background:          #0E0E0E;
 $white:               #FFFFFF;
@@ -24,7 +28,10 @@ $charity-tree-light:  #FFB451;
 $porchfest-dark:      #3A5A40;
 $porchfest-light:     #49D162;
 
-$header-height: 50px;
+$small-screen-width:  600px;
+$medium-screen-width: 900px;
+
+$navbar-height:       50px;
 
 
 html, body {
@@ -44,6 +51,14 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   color: $gray1;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Orbitron", sans-serif;
+}
+
+h5, h6, p {
+  font-family: "Poppins", sans-serif;
 }
 
 //Make text glow
@@ -81,8 +96,8 @@ p {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: $white;
-  height: 60px;
+  background-color: $background;
+  height: $navbar-height;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -94,11 +109,12 @@ p {
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
-    color: $primary-dark;
+    color: $primary;
     transition: color 0.3s;
 
+
     &:hover {
-      color: darken($primary-dark, 10%);
+      color: darken($primary, 10%);
     }
   }
 
@@ -145,11 +161,10 @@ p {
     display: none;
     font-size: 1.5rem;
     cursor: pointer;
-    z-index: 2000; // Ensure it stays on top of the sliding navbar
+    z-index: 2000;
   }
 
-  // Responsive Styles
-  @media (max-width: 768px) {
+  @media (max-width: $small-screen-width) {
     .navbar__menu-icon {
       display: block;
     }
@@ -179,6 +194,7 @@ p {
     .navbar__links a {
       font-size: 1.2rem;
       color: $primary-dark;
+
 
       &:hover {
         color: darken($primary-dark, 10%);
