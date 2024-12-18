@@ -1,0 +1,250 @@
+@import "../../App.scss";
+
+.home {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  max-width: $max-screen-width;
+  justify-self: center;
+  height: 85vh;
+  max-height: 1200px;
+  background: url('../../assets/epic-main.png') no-repeat center right;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .container {
+    max-width: $max-screen-width;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+    z-index: 1;
+  }
+
+  .hero__content {
+    position: relative;
+    padding-left: $page-padding-large;
+    z-index: 2;
+    max-width: 50%;
+    color: $white;
+
+    @media(max-width: $medium-screen-width) {
+      padding: $page-padding-small;
+    }
+
+    @media(max-width: $small-screen-width) {
+      max-width: 100%;
+    }
+
+    h2 {
+      font-family: "Poppins", sans-serif;
+      font-size: 1.5rem;
+      margin: 0;
+      color: $gray2;
+    }
+
+    h1 {
+      font-family: "Orbitron", sans-serif;
+      font-size: 5rem;
+      margin: 0 0 1rem 0;
+      background: linear-gradient(90deg, #3F8A8B 0%, #ADF6F8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p {
+      font-family: "Poppins", sans-serif;
+      font-size: 1.2rem;
+      margin: 1rem 0;
+      background: linear-gradient(90deg, $gray2 0%, $white 66%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero__button {
+      padding: 0.75rem 2rem;
+      font-family: "Poppins", sans-serif;
+      border: solid 2px $secondary;
+      @include apply-glow("border-color", $secondary, $secondary, $secondary);
+      background-color: transparent;
+      color: $white;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      text-transform: uppercase;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: $secondary-dark;
+      }
+    }
+  }
+}
+
+.about-me {
+  position: relative;
+  width: 100%;
+  max-width: $max-screen-width;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: $page-padding-large;
+    width: 100%;
+    max-width: $max-screen-width;
+
+    @media(max-width: $medium-screen-width) {
+      padding: $page-padding-small;
+    }
+  }
+
+  .about-me__content {
+    flex: 1;
+    max-width: 50%;
+    padding-right: 2rem;
+
+    h2 {
+      font-family: "Orbitron", sans-serif;
+      font-size: 2.5rem;
+      color: $white;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-family: "Poppins", sans-serif;
+      font-size: 1rem;
+      color: $gray1;
+      margin-bottom: 2rem;
+      line-height: 1.5;
+
+      @media(max-width: $large-screen-width) {
+        max-width: 800px;
+      }
+
+      @media(max-width: $medium-screen-width) {
+        font-size: 0.8rem;
+      }
+
+      @media(max-width: $small-screen-width) {
+        font-size: 0.6rem;
+      }
+    }
+
+    .about-me__buttons {
+      display: flex;
+      gap: 1rem;
+
+      @media(max-width: $small-screen-width) {
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .about-me__button {
+        padding: 0.75rem 2rem;
+        border: solid 2px $secondary;
+        font-family: "Poppins", sans-serif;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1rem;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+        background: transparent;
+        color: $white;
+
+        @media(max-width: $medium-screen-width) {
+          padding: 0.5rem 1rem;
+          font-size: 0.7rem;
+        }
+
+        &.primary {
+          @include apply-glow("border-color", $secondary);
+          background-color: $secondary;
+
+          &:hover {
+            background-color: lighten($secondary, 10%);
+          }
+        }
+
+        &.secondary {
+          @include apply-glow("border-color", $primary);
+          border-color: $primary;
+          color: $primary;
+
+          &:hover {
+            background-color: $primary;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+
+  .about-me__image {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      border-radius: 50%;
+      width: calc(100% - 75px);
+      max-width: 500px;
+      height: auto;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+
+      @include apply-glow("background-color", $primary-light, $primary-light, $primary-light);
+    }
+  }
+
+  @media (max-width: $large-screen-width) {
+    .container {
+      flex-direction: column-reverse;
+    }
+
+    .about-me__content {
+      max-width: 100%;
+      padding-right: 0;
+      text-align: center;
+
+      .about-me__buttons {
+        justify-content: center;
+      }
+    }
+
+    .about-me__image {
+      max-width: 100%;
+      margin-top: 2rem;
+
+      img {
+        width: 60%;
+        max-width: 500px;
+      }
+    }
+  }
+}

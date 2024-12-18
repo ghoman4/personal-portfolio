@@ -18,7 +18,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 $page-padding;
+    padding: 0 $page-padding-large;
+
+    @media(max-width: $medium-screen-width) {
+      padding: 0 $page-padding-small;
+    }
   }
 
   // Logo Section

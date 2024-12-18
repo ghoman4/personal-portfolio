@@ -31,11 +31,15 @@ $porchfest-light:     #49D162;
 
 $small-screen-width:  600px;
 $medium-screen-width: 900px;
+$large-screen-width:  1200px;
 
 $max-screen-width:    2000px;
 
 $navbar-height:       60px;
-$page-padding:        calc(30px + 5%);
+
+$page-padding-large:  calc(30px + 5%);
+$page-padding-small:  calc(20px + 3%);
+
 
 // Global Styles
 html, body {
