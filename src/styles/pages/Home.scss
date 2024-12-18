@@ -1,5 +1,8 @@
 @import "../../App.scss";
 
+/* =========================
+   Home Section
+========================= */
 .home {
   display: flex;
   align-items: center;
@@ -7,28 +10,32 @@
   justify-content: center;
 }
 
+/* =========================
+   Hero Section
+========================= */
 .hero {
   position: relative;
   width: 100%;
   max-width: $max-screen-width;
-  justify-self: center;
   height: 85vh;
   max-height: 1200px;
-  background: url('../../assets/epic-main.png') no-repeat center right;
-  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: url('../../assets/epic-main.png') no-repeat center right;
+  background-size: cover;
 
+  /* Container within Hero */
   .container {
-    max-width: $max-screen-width;
     width: 100%;
+    max-width: $max-screen-width;
     padding: 0;
     display: flex;
-    justify-content: flex-start;
     flex-direction: column;
+    justify-content: flex-start;
   }
 
+  /* Overlay Gradient */
   &::after {
     content: '';
     position: absolute;
@@ -40,21 +47,15 @@
     z-index: 1;
   }
 
+  /* Hero Content */
   .hero__content {
     position: relative;
-    padding-left: $page-padding-large;
     z-index: 2;
     max-width: 50%;
+    padding-left: $page-padding-large;
     color: $white;
 
-    @media(max-width: $medium-screen-width) {
-      padding: $page-padding-small;
-    }
-
-    @media(max-width: $small-screen-width) {
-      max-width: 100%;
-    }
-
+    /* Typography */
     h2 {
       font-family: "Poppins", sans-serif;
       font-size: 1.5rem;
@@ -80,26 +81,39 @@
       -webkit-text-fill-color: transparent;
     }
 
+    /* Hero Button */
     .hero__button {
       padding: 0.75rem 2rem;
       font-family: "Poppins", sans-serif;
-      border: solid 2px $secondary;
-      @include apply-glow("border-color", $secondary, $secondary, $secondary);
-      background-color: transparent;
-      color: $white;
-      border-radius: 8px;
-      cursor: pointer;
       font-size: 1rem;
       text-transform: uppercase;
+      border: solid 2px $secondary;
+      border-radius: 8px;
+      background-color: transparent;
+      color: $white;
+      cursor: pointer;
       transition: background-color 0.3s ease;
+      @include apply-glow("border-color", $secondary, $secondary, $secondary);
 
       &:hover {
         background-color: $secondary-dark;
       }
     }
+
+    /* Media Queries for Hero Content */
+    @media (max-width: $medium-screen-width) {
+      padding: $page-padding-small;
+    }
+
+    @media (max-width: $small-screen-width) {
+      max-width: 100%;
+    }
   }
 }
 
+/* =========================
+   About Me Section
+========================= */
 .about-me {
   position: relative;
   width: 100%;
@@ -109,25 +123,28 @@
   align-items: center;
   flex-wrap: wrap;
 
+  /* Container within About Me */
   .container {
+    width: 100%;
+    max-width: $max-screen-width;
+    padding: $page-padding-large;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: $page-padding-large;
-    width: 100%;
-    max-width: $max-screen-width;
 
-    @media(max-width: $medium-screen-width) {
+    @media (max-width: $medium-screen-width) {
       padding: $page-padding-small;
     }
   }
 
+  /* About Me Content */
   .about-me__content {
     flex: 1;
     max-width: 50%;
     padding-right: 2rem;
 
+    /* Typography */
     h2 {
       font-family: "Orbitron", sans-serif;
       font-size: 2.5rem;
@@ -142,58 +159,63 @@
       margin-bottom: 2rem;
       line-height: 1.5;
 
-      @media(max-width: $large-screen-width) {
+      @media (max-width: $large-screen-width) {
         max-width: 800px;
       }
 
-      @media(max-width: $medium-screen-width) {
+      @media (max-width: $medium-screen-width) {
         font-size: 0.8rem;
       }
 
-      @media(max-width: $small-screen-width) {
+      @media (max-width: $small-screen-width) {
         font-size: 0.6rem;
       }
     }
 
+    /* About Me Buttons */
     .about-me__buttons {
       display: flex;
       gap: 1rem;
 
-      @media(max-width: $small-screen-width) {
-        align-items: center;
+      @media (max-width: $small-screen-width) {
         flex-direction: column;
+        align-items: center;
       }
 
+      /* Individual Button */
       .about-me__button {
         padding: 0.75rem 2rem;
-        border: solid 2px $secondary;
         font-family: "Poppins", sans-serif;
-        border-radius: 8px;
-        cursor: pointer;
         font-size: 1rem;
         text-transform: uppercase;
-        transition: all 0.3s ease;
+        border: solid 2px $secondary;
+        border-radius: 8px;
         background: transparent;
         color: $white;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        @include apply-glow("border-color", $secondary);
 
-        @media(max-width: $medium-screen-width) {
+        @media (max-width: $medium-screen-width) {
           padding: 0.5rem 1rem;
           font-size: 0.7rem;
         }
 
+        /* Primary Button */
         &.primary {
-          @include apply-glow("border-color", $secondary);
           background-color: $secondary;
+          @include apply-glow("border-color", $secondary);
 
           &:hover {
             background-color: lighten($secondary, 10%);
           }
         }
 
+        /* Secondary Button */
         &.secondary {
-          @include apply-glow("border-color", $primary);
           border-color: $primary;
           color: $primary;
+          @include apply-glow("border-color", $primary);
 
           &:hover {
             background-color: $primary;
@@ -204,6 +226,7 @@
     }
   }
 
+  /* About Me Image */
   .about-me__image {
     flex: 1;
     max-width: 50%;
@@ -212,16 +235,16 @@
     align-items: center;
 
     img {
-      border-radius: 50%;
       width: calc(100% - 75px);
       max-width: 500px;
       height: auto;
+      border-radius: 50%;
       box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-
       @include apply-glow("background-color", $primary-light, $primary-light, $primary-light);
     }
   }
 
+  /* Media Queries for About Me Section */
   @media (max-width: $large-screen-width) {
     .container {
       flex-direction: column-reverse;

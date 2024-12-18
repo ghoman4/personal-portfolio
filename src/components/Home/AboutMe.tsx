@@ -1,8 +1,11 @@
 import React from "react";
 import "../../styles/pages/Home.scss";
 import profileImage from "../../assets/profile-image.png";
+import {useNavigate} from "react-router-dom";
 
 const AboutMe: React.FC = () => {
+    const navigate = useNavigate();
+
     return (
         <section className="about-me">
             <div className="container">
@@ -18,8 +21,14 @@ const AboutMe: React.FC = () => {
                         always driven by curiosity and a passion for continuous learning.
                     </p>
                     <div className="about-me__buttons">
-                        <button className="about-me__button primary">View My Projects</button>
-                        <button className="about-me__button secondary">See More About Me</button>
+                        <button
+                            className="about-me__button primary"
+                            onClick={() => navigate("/projects")}
+                        >View My Projects</button>
+                        <button
+                            className="about-me__button secondary"
+                            onClick={() => navigate("/about")}
+                        >See More About Me</button>
                     </div>
                 </div>
                 <div className="about-me__image">
