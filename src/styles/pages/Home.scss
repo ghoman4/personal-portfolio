@@ -149,7 +149,11 @@
       font-family: "Orbitron", sans-serif;
       font-size: 2.5rem;
       color: $white;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
+
+      @media (max-width: $large-screen-width) {
+        margin-top: 1.5rem;
+      }
     }
 
     p {
@@ -267,6 +271,110 @@
       img {
         width: 60%;
         max-width: 500px;
+      }
+    }
+  }
+}
+
+/* =========================
+   Recent Projects Section
+========================= */
+.recent-projects {
+  width: 100%;
+  max-width: $max-screen-width;
+  padding-bottom: 1000px;
+
+  .project {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: $background-light;
+    padding: 0 $page-padding-large;
+
+    &__image {
+      flex: 1;
+      max-width: 50%;
+      padding-right: 100px;
+
+      img {
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    &__content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+
+      .project__localify-title {
+        font-family: "Orbitron", sans-serif;
+        font-size: 2rem;
+        color: $localify-light;
+        @include apply-glow($localify-dark, $localify-dark, $localify)
+      }
+
+      .project__role,
+      .project__duration {
+        font-family: "Poppins", sans-serif;
+        font-size: 1rem;
+        color: $gray2;
+      }
+
+      .project__description {
+        font-family: "Poppins", sans-serif;
+        font-size: 1rem;
+        color: $gray1;
+        line-height: 1.5;
+      }
+
+      .project__tags {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 1rem;
+
+        .tag {
+          padding: 0.25rem 0.75rem;
+          background-color: darken($background-light, 5%);
+          border-radius: 8px;
+          font-size: 0.8rem;
+          color: $gray2;
+          text-transform: uppercase;
+        }
+      }
+
+      .project__button {
+        margin-top: 1rem;
+        padding: 0.5rem 1.5rem;
+        font-family: "Poppins", sans-serif;
+        font-size: 1rem;
+        text-transform: uppercase;
+        background: transparent;
+        border: solid 2px $localify;
+        color: $localify;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: $localify;
+          color: $white;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $medium-screen-width) {
+    .project {
+      flex-direction: column;
+
+      &:nth-child(even) {
+        flex-direction: column;
+      }
+
+      &__image {
+        max-width: 100%;
       }
     }
   }

@@ -1,6 +1,7 @@
 import React from "react";
 import HeroSection from "../components/Home/HeroSection";
 import AboutMe from "../components/Home/AboutMe";
+import RecentProjects from "../components/Home/RecentProjects";
 
 const Home: React.FC = () => {
 
@@ -8,6 +9,7 @@ const Home: React.FC = () => {
         <div className="home">
             <HeroSection />
             <AboutMe />
+            <RecentProjects />
         </div>
     );
 }
