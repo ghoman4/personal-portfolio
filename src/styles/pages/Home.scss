@@ -25,16 +25,6 @@
   background: url('../../assets/epic-main.png') no-repeat center right;
   background-size: cover;
 
-  /* Container within Hero */
-  .container {
-    width: 100%;
-    max-width: $max-screen-width;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-
   /* Overlay Gradient */
   &::after {
     content: '';
@@ -45,6 +35,16 @@
     height: 100%;
     background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
     z-index: 1;
+  }
+
+  /* Container within Hero */
+  .container {
+    width: 100%;
+    max-width: $max-screen-width;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 
   /* Hero Content */
@@ -284,12 +284,20 @@
   max-width: $max-screen-width;
   padding-bottom: 100px;
 
+  .title {
+    font-family: "Orbitron", sans-serif;
+    font-size: 3rem;
+    margin: 50px 0 20px $page-padding-large;
+  }
+
+  /* Project Item */
   .project {
     display: flex;
     flex-direction: row;
     padding: 30px $page-padding-large;
     gap: calc(2rem + 3%);
 
+    /* Project Image */
     &__image {
       flex: 1;
       max-width: 50%;
@@ -302,6 +310,7 @@
       }
     }
 
+    /* Project Content */
     &__content {
       flex: 1;
       display: flex;
@@ -309,7 +318,7 @@
 
       .project__title {
         font-family: "Orbitron", sans-serif;
-        font-size: 2rem;
+        font-size: 1.8rem;
       }
 
       .project__role {
@@ -320,7 +329,7 @@
 
       .project__duration {
         font-family: "Poppins", sans-serif;
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         color: $gray1;
       }
 
@@ -362,7 +371,6 @@
         cursor: pointer;
         background-color: transparent;
         transition: all 0.3s ease;
-
         width: auto;
         max-width: fit-content;
         box-sizing: border-box;
@@ -374,6 +382,7 @@
             transform: translateX(5px);
             transition: transform 0.3s ease;
           }
+
           h6 {
             color: $white;
           }
@@ -389,38 +398,48 @@
       }
     }
 
-    @media(min-width: $xl-screen-width) {
+    /* Extra Large Screen Styles */
+    @media (min-width: $xl-screen-width) {
       &__content {
         .project__localify-title {
           font-size: 3rem;
         }
+
         .project__role {
           font-size: 1.5rem;
         }
+
         .project__duration {
           font-size: 1.25rem;
         }
+
         .project__description {
           font-size: 1rem;
         }
+
         .project__button {
           padding: 0.5rem 1.25rem;
 
           h6 {
             font-size: 0.8rem;
           }
+
           svg {
             font-size: 1.25rem;
           }
         }
       }
     }
-  }
 
-  @media (max-width: $medium-screen-width) {
-    .project {
+    /* Medium Screen Styles */
+    @media (max-width: $medium-screen-width) {
       flex-direction: column;
-      gap: 2rem;
+      gap: 1rem;
+
+      &__image {
+        max-width: 100%;
+        align-self: flex-start;
+      }
 
       &__content {
         .project__description {
@@ -428,25 +447,31 @@
         }
       }
 
-      &:nth-child(even) {
-        flex-direction: column;
+      &__tags {
+        display: none !important;
       }
 
-      &__image {
-        max-width: 100%;
+      &__button {
+        margin-top: 0.8rem;
+      }
+
+      &:nth-child(even) {
+        flex-direction: column;
       }
     }
   }
 
+  /* Project Specific Styles */
   .localify-title {
     color: $localify-light;
-    @include apply-glow($localify-dark, $localify-dark, $localify)
+    @include apply-glow($localify-dark, $localify-dark, $localify);
   }
 
   .localify-button {
     color: $localify-light;
     border: 2px solid $localify;
     @include apply-glow("background-color", $localify, $localify);
+
     &:hover {
       @include apply-glow("background-color", $localify, $localify, $localify);
     }
@@ -461,6 +486,7 @@
     color: $charity-tree-light;
     border: 2px solid $charity-tree;
     @include apply-glow("background-color", $charity-tree, $charity-tree);
+
     &:hover {
       @include apply-glow("background-color", $charity-tree, $charity-tree, $charity-tree);
     }
@@ -468,15 +494,26 @@
 
   .porchfest-title {
     color: $porchfest-light;
-    @include apply-glow($porchfest-dark, $porchfest-dark, $porchfest-light)
+    @include apply-glow($porchfest-dark, $porchfest-dark, $porchfest-light);
   }
 
   .porchfest-button {
     color: $porchfest-light;
     border: 2px solid $porchfest-light;
     @include apply-glow("background-color", $porchfest-light, $porchfest-light);
+
     &:hover {
       @include apply-glow("background-color", $porchfest-light, $porchfest-light, $porchfest-light);
+    }
+  }
+
+  @media(max-width: $medium-screen-width) {
+    .project {
+      padding: 30px $page-padding-small;
+    }
+    .title {
+      margin: 30px 0 10px $page-padding-small;
+      font-size: 2rem;
     }
   }
 }

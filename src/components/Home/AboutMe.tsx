@@ -17,7 +17,7 @@ const AboutMe: React.FC = () => {
                         including leading frontend development on Localify.org, a platform for discovering local music,
                         using React and SCSS. Some of my other projects include Charity Tree, a web app supporting local charities
                         built with React and Spring Boot, and the PorchFest app, leveraging Swift and MapKit to enhance the
-                        experience without distraction. Outside of coding, I enjoy skiing, singing, and exploring new places,
+                        experience without distraction. Outside of coding, I enjoy skiing, karaoke, and exploring new places,
                         always driven by curiosity and a passion for continuous learning.
                     </p>
                     <div className="about-me__buttons">

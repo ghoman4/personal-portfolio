@@ -9,6 +9,7 @@ import porchfestPreview from "../../assets/porchfest-preview.png";
 const RecentProjects: React.FC = () => {
     return (
         <section className="recent-projects">
+            <h1 className="title">Recent Projects</h1>
             <div className="project">
                 <div className="project__image">
                     <img src={localifyPreview} alt="Localify Preview"/>
