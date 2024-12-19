@@ -1,0 +1,67 @@
+@import "../../App.scss";
+
+.floating-contact {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0.75rem 1.5rem;
+  background-color: $gray3;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.floating-contact__icon {
+  font-size: 1.5rem;
+  color: $white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &:nth-child(1) {
+    animation: pulse-primary 3s infinite;
+  }
+
+  &:nth-child(2) {
+    animation: pulse-secondary 3s infinite 1s;
+  }
+
+  &:nth-child(3) {
+    animation: pulse-tertiary 3s infinite 2s;
+  }
+}
+
+@keyframes pulse-primary {
+  0%, 100% {
+    color: $white;
+  }
+  50% {
+    color: $primary-light;
+  }
+}
+
+@keyframes pulse-secondary {
+  0%, 100% {
+    color: $white;
+  }
+  50% {
+    color: $secondary-light;
+  }
+}
+
+@keyframes pulse-tertiary {
+  0%, 100% {
+    color: $white;
+  }
+  50% {
+    color: $charity-tree-light;
+  }
+}

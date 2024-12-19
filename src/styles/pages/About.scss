@@ -128,7 +128,6 @@ $description-font-size-sm: 0.8rem;
 
   /* Adjust padding for smaller screens */
   @media (max-width: $medium-screen-width) {
-    padding: 0 $page-padding-small;
     &__section {
       padding-bottom: 60px;
     }

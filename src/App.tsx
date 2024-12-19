@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import FloatingContact from "./components/FloatingContact";
 
 const App: React.FC = () => {
     return (
@@ -16,6 +17,7 @@ const App: React.FC = () => {
                     element={
                         <>
                             <NavBar active={CurrentPage.HOME} />
+                            <FloatingContact />
                             <Home />
                         </>
                     }
@@ -25,6 +27,7 @@ const App: React.FC = () => {
                     element={
                         <>
                             <NavBar active={CurrentPage.PROJECTS} />
+                            <FloatingContact />
                             <Projects />
                         </>
                     }
@@ -34,6 +37,7 @@ const App: React.FC = () => {
                     element={
                         <>
                             <NavBar active={CurrentPage.ABOUT} />
+                            <FloatingContact />
                             <About />
                         </>
                     }
@@ -43,6 +47,7 @@ const App: React.FC = () => {
                     element={
                         <>
                             <NavBar active={CurrentPage.CONTACT} />
+                            <FloatingContact />
                             <Contact />
                         </>
                     }
