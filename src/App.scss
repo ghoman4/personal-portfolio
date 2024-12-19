@@ -98,5 +98,15 @@ h5, h6, p {
   }
 }
 
+.primary-text-glow {
+  color: $primary-light;
+  @include apply-glow($primary, $primary, $primary-dark);
+}
+
+.secondary-text-glow {
+  color: $secondary-light;
+  @include apply-glow($secondary, $secondary, $secondary-dark);
+}
+
 
 
