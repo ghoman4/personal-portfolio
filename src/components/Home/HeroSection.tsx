@@ -1,5 +1,6 @@
 import React from "react";
 import "../../styles/pages/Home.scss";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
 const HeroSection: React.FC = () => {
     return (
@@ -12,7 +13,10 @@ const HeroSection: React.FC = () => {
                         Boston developer driven by curiosity and a love for solving real-world problems,
                         always seeking new challenges to build impactful, scalable solutions.
                     </p>
-                    <button className="hero__button">Contact Me</button>
+                    <button className="hero__button">
+                        Contact Me
+                        <ChevronRightIcon/>
+                    </button>
                 </div>
             </div>
         </section>
