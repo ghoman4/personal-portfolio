@@ -1,0 +1,39 @@
+@import "../../App.scss";
+
+.projects {
+  max-width: $max-screen-width;
+  margin: 0 auto;
+
+  .container {
+    margin: 50px $page-padding-large;
+  }
+
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .card {
+    background-color: $gray2;
+    aspect-ratio: 1;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: $white;
+  }
+
+  @media(max-height: $medium-screen-width) {
+    .container {
+      margin: 50px $page-padding-small;
+    }
+  }
+}
