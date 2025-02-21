@@ -5,8 +5,11 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import localifyPreview from "../../assets/localify-preview.png";
 import charityTreePreview from "../../assets/charity-tree-preview.png";
 import porchfestPreview from "../../assets/porchfest-preview.png";
+import {useNavigate} from "react-router-dom";
 
 const RecentProjects: React.FC = () => {
+    const navigate = useNavigate();
+
     return (
         <section className="recent-projects">
             <h1 className="title">Recent Projects</h1>
@@ -80,6 +83,12 @@ const RecentProjects: React.FC = () => {
                         <ChevronRightIcon/>
                     </span>
                 </div>
+            </div>
+            <div className="view-all-button">
+                <button onClick={() => navigate("/projects")}>
+                    <h5>View All Projects</h5>
+                    <ChevronRightIcon />
+                </button>
             </div>
         </section>
     );

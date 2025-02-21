@@ -2,6 +2,7 @@ import React from "react";
 import "../../styles/pages/Home.scss";
 import profileImage from "../../assets/profile-image.png";
 import {useNavigate} from "react-router-dom";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
 const AboutMe: React.FC = () => {
     const navigate = useNavigate();
@@ -22,17 +23,23 @@ const AboutMe: React.FC = () => {
                     </p>
                     <div className="about-me__buttons">
                         <button
-                            className="about-me__button primary"
-                            onClick={() => navigate("/projects")}
-                        >View My Projects</button>
-                        <button
                             className="about-me__button secondary"
                             onClick={() => navigate("/about")}
-                        >See More About Me</button>
+                        >
+                            See More About Me
+                            <ChevronRightIcon className="chevron" />
+                        </button>
+                        <button
+                            className="about-me__button primary"
+                            onClick={() => navigate("/projects")}
+                        >
+                            View My Projects
+                            <ChevronRightIcon className="chevron" />
+                        </button>
                     </div>
                 </div>
                 <div className="about-me__image">
-                    <img src={profileImage} alt="Griffin Homan" />
+                    <img src={profileImage} alt="Griffin Homan"/>
                 </div>
             </div>
         </section>
