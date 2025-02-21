@@ -1,8 +1,11 @@
 import React from "react";
 import "../../styles/pages/Home.scss";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import {useNavigate} from "react-router-dom";
 
 const HeroSection: React.FC = () => {
+    const navigate = useNavigate();
+
     return (
         <section className="hero">
             <div className="container">
@@ -10,10 +13,13 @@ const HeroSection: React.FC = () => {
                     <h2>Hey, I'm</h2>
                     <h1>Griffin Homan</h1>
                     <p>
-                        Boston developer driven by curiosity and a love for solving real-world problems,
-                        always seeking new challenges to build impactful, scalable solutions.
+                        Full stack developer dedicated to designing and building innovative,
+                        scalable solutions that tackle real-world challenges.
                     </p>
-                    <button className="hero__button">
+                    <button
+                        className="hero__button"
+                        onClick={() => navigate("/contact")}
+                    >
                         Contact Me
                         <ChevronRightIcon/>
                     </button>
