@@ -12,7 +12,7 @@ const RecentProjects: React.FC = () => {
 
     return (
         <section className="recent-projects">
-            <h1 className="title">Recent Projects</h1>
+            <h1 className="title">Notable Projects</h1>
             <div className="project">
                 <div className="project__image">
                     <img src={localifyPreview} alt="Localify Preview"/>
@@ -36,6 +36,9 @@ const RecentProjects: React.FC = () => {
                     </span>
                 </div>
             </div>
+
+
+            {/*
             <div className="project">
                 <div className="project__image">
                     <img src={charityTreePreview} alt="Charity Tree Preview"/>
@@ -84,12 +87,18 @@ const RecentProjects: React.FC = () => {
                     </span>
                 </div>
             </div>
-            <div className="view-all-button">
-                <button onClick={() => navigate("/projects")}>
-                    <h5>View All Projects</h5>
-                    <ChevronRightIcon />
-                </button>
-            </div>
+            */}
+
+            <h2
+                className="coming-soon"
+            >( More projects coming soon )</h2>
+            <button
+                className="view-all-button"
+                onClick={() => navigate("/projects")}
+            >
+                <h5>View All Projects</h5>
+                <ChevronRightIcon/>
+            </button>
         </section>
     );
 };
