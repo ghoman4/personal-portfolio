@@ -1,8 +1,10 @@
 import React from "react";
 import "../styles/pages/Error404.scss";
 import scaredCat from "../assets/scared-cat-404.gif";
+import {useNavigate} from "react-router-dom";
 
 const Error404: React.FC = () => {
+    const navigate = useNavigate();
 
     return (
         <div className={"error-404-container"}>
@@ -11,7 +13,7 @@ const Error404: React.FC = () => {
             <h2>Page Not Found</h2>
             <h4>I uh.. I don't think you want to be here. Try the button below?
                 Click it? Or the nav bar above? That could help? Help? Are you still here?</h4>
-            <button>
+            <button onClick={() => navigate("/")}>
                 Back to Safety (Home)
             </button>
         </div>
