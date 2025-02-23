@@ -3,8 +3,8 @@ import "../../styles/pages/Home.scss";
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
 import localifyPreview from "../../assets/localify-preview.png";
-import charityTreePreview from "../../assets/charity-tree-preview.png";
-import porchfestPreview from "../../assets/porchfest-preview.png";
+//import charityTreePreview from "../../assets/charity-tree-preview.png";
+//import porchfestPreview from "../../assets/porchfest-preview.png";
 import {useNavigate} from "react-router-dom";
 
 const RecentProjects: React.FC = () => {

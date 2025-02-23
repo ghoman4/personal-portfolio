@@ -7,6 +7,7 @@ import Projects from "./pages/Projects";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import FloatingContact from "./components/FloatingContact";
+import Error404 from "./pages/Error404";
 
 const App: React.FC = () => {
     return (
@@ -49,6 +50,16 @@ const App: React.FC = () => {
                             <NavBar active={CurrentPage.CONTACT} />
                             <FloatingContact />
                             <Contact />
+                        </>
+                    }
+                />
+                {/* Any other page (404)*/}
+                <Route
+                    path="*"
+                    element={
+                        <>
+                            <NavBar />
+                            <Error404 />
                         </>
                     }
                 />

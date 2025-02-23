@@ -1,0 +1,41 @@
+@import "../../App.scss";
+
+.error-404-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 90vh;
+
+  img {
+    margin-bottom: 30px;
+    aspect-ratio: 1;
+    width: 250px;
+  }
+
+  h4 {
+    color: $gray1;
+    font-weight: normal;
+    padding: 15px 30px 0 30px;
+    font-family: "Poppins", sans-serif;
+    max-width: 600px;
+    text-align: center;
+  }
+
+  button {
+    color: white;
+    background: transparent;
+    font-size: 20px;
+    margin-top: 20px;
+    font-family: "Poppins", sans-serif;
+    border: solid $primary 2px;
+    padding: 10px 20px;
+    border-radius: 32px;
+    cursor: pointer;
+    @include apply-glow("border-color", $primary, $primary);
+
+    &:hover {
+      @include apply-glow("border-color", $primary, $primary, $primary);
+    }
+  }
+}

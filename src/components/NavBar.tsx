@@ -10,7 +10,7 @@ export enum CurrentPage {
 }
 
 type Props = {
-    active: CurrentPage;
+    active?: CurrentPage;
 }
 
 const NavBar: React.FC<Props> = ({ active }) => {
