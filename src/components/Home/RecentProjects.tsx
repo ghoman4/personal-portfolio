@@ -105,7 +105,6 @@ const RecentProjects: React.FC = () => {
             </button>
         </section>
     );
-
 };
 
 export default RecentProjects;
