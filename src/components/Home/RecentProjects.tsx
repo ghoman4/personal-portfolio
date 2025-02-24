@@ -30,7 +30,10 @@ const RecentProjects: React.FC = () => {
                         <span className="tag">Typescript</span>
                         <span className="tag">Web App</span>
                     </div>
-                    <span className="project__button localify-button">
+                    <span
+                        onClick={() => navigate("/project/localify")}
+                        className="project__button localify-button"
+                    >
                         <h6>View More</h6>
                         <ChevronRightIcon/>
                     </span>
