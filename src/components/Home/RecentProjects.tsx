@@ -32,7 +32,7 @@ const RecentProjects: React.FC = () => {
                         <span className="tag">Web App</span>
                     </div>
                     <span
-                        onClick={() => navigate("/#/project/localify")}
+                        onClick={() => navigate("/project/localify")}
                         className="project__button localify-button"
                     >
                         <h6>View More</h6>
@@ -98,7 +98,7 @@ const RecentProjects: React.FC = () => {
             >( More projects coming soon )</h2>
             <button
                 className="view-all-button"
-                onClick={() => navigate("/#/projects")}
+                onClick={() => navigate("/projects")}
             >
                 <h5>View All Projects</h5>
                 <ChevronRightIcon/>

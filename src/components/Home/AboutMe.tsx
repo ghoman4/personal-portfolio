@@ -24,14 +24,14 @@ const AboutMe: React.FC = () => {
                     <div className="about-me__buttons">
                         <button
                             className="about-me__button secondary"
-                            onClick={() => navigate("/#/about")}
+                            onClick={() => navigate("/about")}
                         >
                             See More About Me
                             <ChevronRightIcon className="chevron" />
                         </button>
                         <button
                             className="about-me__button primary"
-                            onClick={() => navigate("/#/projects")}
+                            onClick={() => navigate("/projects")}
                         >
                             View My Projects
                             <ChevronRightIcon className="chevron" />
