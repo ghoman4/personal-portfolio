@@ -9,10 +9,9 @@ const FloatingContact: React.FC = () => {
 
     return (
         <div className="floating-contact">
-            <FaEnvelope
-                className="floating-contact__icon"
-                onClick={() => navigator.clipboard.writeText("ghoman@ithaca.edu")}
-            />
+            <a href="mailto:griffinhomanj@gmail.com" className="floating-contact__icon">
+                <FaEnvelope />
+            </a>
             <FaLinkedin
                 className="floating-contact__icon"
                 onClick={() => handleClick("https://www.linkedin.com/in/griffin-homan-2b4042231/")}
