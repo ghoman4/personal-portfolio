@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.scss";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import NavBar, { CurrentPage } from "./components/NavBar";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";

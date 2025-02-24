@@ -18,7 +18,7 @@ const HeroSection: React.FC = () => {
                     </p>
                     <button
                         className="hero__button"
-                        onClick={() => navigate("/contact")}
+                        onClick={() => navigate("/#/contact")}
                     >
                         Contact Me
                         <ChevronRightIcon/>
