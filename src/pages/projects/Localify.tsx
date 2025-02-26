@@ -4,7 +4,7 @@ import "../../styles/projects/Localify.scss";
 const Localify: React.FC = () => {
     return (
         <section className="localify-project-page">
-            <div className="container">
+            <div>
                 <header className="project-header">
                     <h1>Localify.org</h1>
                     <p className="tagline">
@@ -15,15 +15,24 @@ const Localify: React.FC = () => {
                 <section className="project-section background">
                     <h2>Background</h2>
                     <p>
-                        Localify.org is a platform that connects music lovers with local
-                        artists and events through personalized recommendations, making it
-                        easier to discover and support emerging talent. Its mission is to
+                        <a
+                            href="https://localify.org"
+                            target="_blank"
+                            rel="noopener noreferrer">Localify.org</a> is
+                            a platform that connects music lovers with local
+                            artists and events through personalized recommendations, making it
+                            easier to discover and support emerging talent. Its mission is to
                         connect these smaller artists to audiences, fostering the growth of
                         community-based music scenes.
                     </p>
                     <p>
-                        I joined the project in April 2022 as a freshman at Ithaca College
-                        after excelling in Doug Turnbull’s introductory computer science
+                        I joined the project in April 2022 as a freshman at <a
+                        href="https://www.ithaca.edu/"
+                        target="_blank"
+                        rel="noopener noreferrer">Ithaca College</a> after excelling in <a
+                            href="https://www.ithaca.edu/faculty/dturnbull"
+                            target="_blank"
+                        rel="noopener noreferrer">Doug Turnbull</a>’s introductory computer science
                         class. Doug — both the project’s founder and a professor at the
                         college — reached out and offered me a position in the summer
                         scholars program to work on the project. While my programming skills
@@ -31,7 +40,12 @@ const Localify: React.FC = () => {
                         aligned with both my majors (B.S. in Computer Science & B.S. in
                         Emerging Media) as well as my Minor in Music. Three years later, I
                         continue to work on the project, contributing to its development,
-                        particularly on the frontend, in addition to its promotion.
+                        particularly on the frontend, in addition to its
+                        promotion. <a
+                            href="https://localify.org"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >Visit site.</a>
                     </p>
                 </section>
 
@@ -51,10 +65,19 @@ const Localify: React.FC = () => {
                             building and organizing the React codebase in Typescript and SCSS.
                             I built the foundation of every page and core functionalities,
                             with the exception of the landing page, while collaborating with
-                            teammates, Paul Gagliano and Ruth Ayambem, who contributed minor
+                            teammates, <a
+                            href="https://www.linkedin.com/in/paul-gagliano-060a4a23b/"
+                            target="_blank"
+                            rel="noopener noreferrer">Paul Gagliano</a> and <a
+                            href="https://www.linkedin.com/in/ruth-ayambem/"
+                            target="_blank"
+                            rel="noopener noreferrer">Ruth Ayambem</a>, who contributed minor
                             refinements and new features. The web application utilizes Axios
                             to communicate with a Spring Boot backend which I built in
-                            collaboration with lead backend developers April Trainor and Paul
+                            collaboration with lead backend developers <a
+                            href="https://github.com/ayypril"
+                            target="_blank"
+                            rel="noopener noreferrer">April Trainor</a> and Paul
                             Gagliano. Today, I conduct user tests to improve and maintain the
                             website while integrating new features as innovative ideas come to
                             light. (November 2023 - Now)
@@ -67,8 +90,14 @@ const Localify: React.FC = () => {
                             Spring Boot backend after the previous Flask setup was overhauled
                             with many new endpoints and data structures. Instead of patching
                             the old code, the team opted to rebuild from scratch with a
-                            mobile-first approach. Collaborating with Emmet Barry and Elizabeth
-                            Richards, we developed a React Native prototype—showcased at the
+                            mobile-first approach. Collaborating with <a
+                            href="https://www.linkedin.com/in/emmett-barry-5343b2220/"
+                            target="_blank"
+                            rel="noopener noreferrer">Emmet Barry</a> and <a
+                            href="https://www.linkedin.com/in/elizabeth-richards-72509b18a/"
+                            target="_blank"
+                            rel="noopener noreferrer">Elizabeth Richards</a>,
+                            we developed a React Native prototype—showcased at the
                             17th ACM Conference on Recommender Systems in Singapore in 2023—that
                             allowed me to hone skills in React Native development, mobile UX
                             design, and API integration. Ultimately, the mobile app was scrapped
@@ -82,8 +111,11 @@ const Localify: React.FC = () => {
                             The SwiftUI-based iOS app is currently in development alongside our
                             fully featured React web application. I built all of the core API
                             functionalities to properly communicate with the backend, as well as
-                            the foundational structure for every page. Working alongside Fisher
-                            Griesel and Ruth Ayambem, we're enhancing our iOS app to match the
+                            the foundational structure for every page. Working alongside <a
+                            href="https://github.com/FisherG05"
+                            target="_blank"
+                            rel="noopener noreferrer">Fisher
+                            Griesel</a>, we're enhancing our iOS app to match the
                             capabilities of our web version. By utilizing SwiftUI's robust
                             features, we're expanding our coding expertise while crafting a
                             seamless and optimized mobile experience.
@@ -106,7 +138,12 @@ const Localify: React.FC = () => {
                             like popularity bias to recommend local talent and events effectively.
                             Presented at the 17th ACM Conference on Recommender Systems in the
                             Philippines, this work highlights our data-driven approach and the
-                            scalability of our system.
+                            scalability of our
+                            system. <a
+                                href="https://drive.google.com/file/d/1hWIau3iwxyCCnL2ujVYSzc0myqyv60iz/view"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >View Paper.</a>
                         </p>
                     </div>
                     <div className="paper">
@@ -121,7 +158,12 @@ const Localify: React.FC = () => {
                             design, which adapts a Weighted Regularized Matrix Factorization
                             algorithm to rank lesser-known artists relative to familiar seed
                             artists, and highlights innovative UI/UX strategies including
-                            personalized playlists and weekly email digests.
+                            personalized playlists and weekly email
+                            digests. <a
+                                href="https://drive.google.com/file/d/1D_boZFL43D-85wQRJnH7nPR_kudtiAS2/view"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >View Paper.</a>
                         </p>
                     </div>
                     <div className="paper">
@@ -132,7 +174,12 @@ const Localify: React.FC = () => {
                             International Society for Music Information Retrieval (ISMIR)
                             Conference. It was an exciting event sponsored by Music.AI, Adobe,
                             and Google, among others, featuring numerous talks, poster sessions,
-                            and networking opportunities with industry and academic professionals.
+                            and networking opportunities with industry and academic
+                            professionals. <a
+                                href="https://www.linkedin.com/posts/griffin-homan-2b4042231_i-am-honored-to-have-attended-the-25th-international-activity-7262973223061929985-XN0V?utm_source=share&utm_medium=member_desktop&rcm=ACoAADnZIygBPSA8teL1ChQAsQb1W3h3iPDCfKI"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >View LinkedIn Post.</a>
                         </p>
                     </div>
                 </section>
