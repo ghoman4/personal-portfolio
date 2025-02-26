@@ -1,21 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.d17d375c.css",
-    "main.js": "/static/js/main.455e1a5b.js",
+    "main.css": "/static/css/main.a4f48030.css",
+    "main.js": "/static/js/main.f373089e.js",
     "static/js/453.1407b060.chunk.js": "/static/js/453.1407b060.chunk.js",
     "static/media/profile-image.png": "/static/media/profile-image.f26e128956ba61fb9188.png",
     "static/media/epic-main.png": "/static/media/epic-main.64af66b622c87f7e8798.png",
     "static/media/headshot.png": "/static/media/headshot.1745c75341bb6b6fa15c.png",
     "static/media/localify-preview.png": "/static/media/localify-preview.f7df8e5d566a9dee3c34.png",
-    "static/media/lulu.png": "/static/media/lulu.d87b850a6ba3aee0866d.png",
     "static/media/scared-cat-404.gif": "/static/media/scared-cat-404.12d8a556c48c421e5f4d.gif",
     "index.html": "/index.html",
-    "main.d17d375c.css.map": "/static/css/main.d17d375c.css.map",
-    "main.455e1a5b.js.map": "/static/js/main.455e1a5b.js.map",
+    "main.a4f48030.css.map": "/static/css/main.a4f48030.css.map",
+    "main.f373089e.js.map": "/static/js/main.f373089e.js.map",
     "453.1407b060.chunk.js.map": "/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d17d375c.css",
-    "static/js/main.455e1a5b.js"
+    "static/css/main.a4f48030.css",
+    "static/js/main.f373089e.js"
   ]
 }
