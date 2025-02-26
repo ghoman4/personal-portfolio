@@ -1,12 +1,11 @@
 @import "../../App.scss";
 
 .projects {
+  display: flex;
+  flex-direction: column;
   max-width: $max-screen-width;
-  margin: 0 auto;
-
-  .container {
-    margin: 50px $page-padding-large;
-  }
+  padding: 0 $page-padding-large;
+  margin: 50px 0 80px 0;
 
   .title {
     font-size: 2.5rem;
@@ -15,25 +14,98 @@
 
   .card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 1.5rem;
   }
 
   .card {
-    background-color: $gray2;
-    aspect-ratio: 1;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: bold;
+    background: $background-light;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column; // Ensure the card takes full height for alignment
+
+    &__image {
+      width: 100%;
+      height: auto;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+
+    &__text-container {
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      flex: 1; // Allow the text container to fill remaining space
+    }
+
+    &__name {
+      font-size: 24px;
+    }
+
+    &__date {
+      // Date styling if needed
+    }
+
+    &__languages {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 0;
+      margin: 0 0 16px 0;
+
+      li {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 0.65rem;
+        color: $white;
+        background-color: $gray3;
+        border-radius: 50px;
+        text-transform: uppercase;
+        padding: 0.5rem 1rem;
+        margin: 0.25rem 0.5rem 0.25rem 0;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .view-all-button {
+    margin-top: auto;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    border-radius: 32px;
+    font-size: 14px;
+    padding: 0.5rem 1rem;
     color: $white;
+    background: transparent;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    border: 2px solid $primary;
+    @include apply-glow("border-color", $primary, $primary);
+
+    h5 {
+      color: $white;
+      font-size: 14px;
+      margin: 0;
+      padding: 0;
+    }
+
+    svg {
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      @include apply-glow("border-color", $primary, $primary, $primary);
+
+      svg {
+        transform: translateX(5px);
+      }
+    }
   }
 
   @media(max-height: $medium-screen-width) {
-    .container {
-      margin: 50px $page-padding-small;
-    }
+    padding: 0 $page-padding-small;
   }
 }
