@@ -189,7 +189,7 @@ const Localify: React.FC = () => {
                     <p>
                         I want to extend a heartfelt thank you to Doug Turnbull for welcoming
                         me on the Localify project with so little experience at the end of my
-                        freshman year. I truly learned so much—probably more than in my classes—and
+                        freshman year. I truly learned so much, and
                         I was privileged to work alongside so many talented individuals. I’m grateful
                         for the lab space that allowed me to work between classes, the opportunities
                         for independent research, unforgettable trips, and the chance to connect with

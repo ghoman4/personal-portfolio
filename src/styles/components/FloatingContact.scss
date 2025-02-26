@@ -16,11 +16,20 @@
   z-index: 1000;
 }
 
+// Prevents <a> from being affected by App.scss
+.floating-contact a.floating-contact__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
 .floating-contact__icon {
   font-size: 1.5rem;
   color: $white;
   cursor: pointer;
   transition: transform 0.3s ease;
+  border-bottom: none;
 
   &:hover {
     transform: scale(1.2);
