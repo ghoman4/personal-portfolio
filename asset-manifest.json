@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.a4f48030.css",
-    "main.js": "/static/js/main.f373089e.js",
+    "main.css": "/static/css/main.42cb276f.css",
+    "main.js": "/static/js/main.8e61536c.js",
     "static/js/453.1407b060.chunk.js": "/static/js/453.1407b060.chunk.js",
     "static/media/profile-image.png": "/static/media/profile-image.f26e128956ba61fb9188.png",
     "static/media/epic-main.png": "/static/media/epic-main.64af66b622c87f7e8798.png",
@@ -9,12 +9,12 @@
     "static/media/localify-preview.png": "/static/media/localify-preview.f7df8e5d566a9dee3c34.png",
     "static/media/scared-cat-404.gif": "/static/media/scared-cat-404.12d8a556c48c421e5f4d.gif",
     "index.html": "/index.html",
-    "main.a4f48030.css.map": "/static/css/main.a4f48030.css.map",
-    "main.f373089e.js.map": "/static/js/main.f373089e.js.map",
+    "main.42cb276f.css.map": "/static/css/main.42cb276f.css.map",
+    "main.8e61536c.js.map": "/static/js/main.8e61536c.js.map",
     "453.1407b060.chunk.js.map": "/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a4f48030.css",
-    "static/js/main.f373089e.js"
+    "static/css/main.42cb276f.css",
+    "static/js/main.8e61536c.js"
   ]
 }
