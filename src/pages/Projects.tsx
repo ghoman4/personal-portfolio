@@ -12,6 +12,7 @@ interface SimpleProject {
     startDate: Date;
     endDate?: Date;
     languages: string[];
+    style: string;
 }
 
 const projects: SimpleProject[] = [
@@ -23,6 +24,7 @@ const projects: SimpleProject[] = [
         startDate: new Date(2022, 3),
         endDate: undefined,
         languages: ["React", "SCSS", "TypeScript", "SwiftUI"],
+        style: "localify-text-glow"
     },
     {
         id: "localify",
@@ -32,6 +34,7 @@ const projects: SimpleProject[] = [
         startDate: new Date(2022, 8),
         endDate: new Date(2023, 11),
         languages: ["React", "SCSS", "TypeScript", "SwiftUI"],
+        style: "primary-text-glow"
     },
     {
         id: "localify",
@@ -45,6 +48,7 @@ const projects: SimpleProject[] = [
             "SCSS",
             "TypeScript",
         ],
+        style: "secondary-text-glow"
     },
 ];
 
@@ -74,7 +78,7 @@ const Projects: React.FC = () => {
                             />
                             <div className="card__text-container">
                                 <div>
-                                    <h3 className="card__name">{project.name}</h3>
+                                    <h3 className={`card__name ${project.style}`}>{project.name}</h3>
                                     <p className="card__date">{`${startDate} - ${endDate}`}</p>
                                     <ul className="card__languages">
                                         {project.languages.map((language, i) => (

@@ -100,12 +100,17 @@ h5, h6, p, li {
 
 .primary-text-glow {
   color: $primary-light;
-  @include apply-glow($primary, $primary, $primary-dark);
+  @include apply-glow($primary, $primary);
 }
 
 .secondary-text-glow {
   color: $secondary-light;
-  @include apply-glow($secondary, $secondary, $secondary-dark);
+  @include apply-glow($secondary, $secondary);
+}
+
+.localify-text-glow {
+  color: $localify-light;
+  @include apply-glow($localify, $localify);
 }
 
 a {
