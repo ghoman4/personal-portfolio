@@ -113,6 +113,11 @@ h5, h6, p, li {
   @include apply-glow($localify, $localify);
 }
 
+.charity-tree-text-glow {
+  color: $charity-tree-light;
+  @include apply-glow($charity-tree, $charity-tree);
+}
+
 a {
   color: $secondary;
   text-decoration: none;

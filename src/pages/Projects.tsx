@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import "../styles/pages/Projects.scss";
 import localifyImage from "../assets/localify-preview.png";
+import charityTreeImage from "../assets/charity-tree-preview.png";
 
 interface SimpleProject {
     id: string;
@@ -11,7 +12,7 @@ interface SimpleProject {
     stillWorking: boolean;
     startDate: Date;
     endDate?: Date;
-    languages: string[];
+    keywords: string[];
     style: string;
 }
 
@@ -23,18 +24,18 @@ const projects: SimpleProject[] = [
         stillWorking: true,
         startDate: new Date(2022, 3),
         endDate: undefined,
-        languages: ["React", "SCSS", "TypeScript", "SwiftUI"],
+        keywords: ["React", "SCSS", "TypeScript", "SwiftUI"],
         style: "localify-text-glow"
     },
     {
-        id: "localify",
-        name: "Localify.org",
-        image: localifyImage,
+        id: "charity-tree",
+        name: "Charity Tree",
+        image: charityTreeImage,
         stillWorking: false,
-        startDate: new Date(2022, 8),
-        endDate: new Date(2023, 11),
-        languages: ["React", "SCSS", "TypeScript", "SwiftUI"],
-        style: "primary-text-glow"
+        startDate: new Date(2024, 0),
+        endDate: new Date(2024, 4),
+        keywords: ["Spring Boot", "Java", "JWT Auth."],
+        style: "charity-tree-text-glow"
     },
     {
         id: "localify",
@@ -43,7 +44,7 @@ const projects: SimpleProject[] = [
         stillWorking: false,
         startDate: new Date(2023, 0),
         endDate: new Date(2023, 2),
-        languages: [
+        keywords: [
             "React",
             "SCSS",
             "TypeScript",
@@ -81,8 +82,8 @@ const Projects: React.FC = () => {
                                     <h3 className={`card__name ${project.style}`}>{project.name}</h3>
                                     <p className="card__date">{`${startDate} - ${endDate}`}</p>
                                     <ul className="card__languages">
-                                        {project.languages.map((language, i) => (
-                                            <li key={i}>{language}</li>
+                                        {project.keywords.map((keyword, i) => (
+                                            <li key={i}>{keyword}</li>
                                         ))}
                                     </ul>
                                 </div>
