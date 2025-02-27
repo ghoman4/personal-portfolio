@@ -1,20 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.42cb276f.css",
-    "main.js": "/static/js/main.8e61536c.js",
+    "main.css": "/static/css/main.a7b10a37.css",
+    "main.js": "/static/js/main.313558df.js",
     "static/js/453.1407b060.chunk.js": "/static/js/453.1407b060.chunk.js",
     "static/media/profile-image.png": "/static/media/profile-image.f26e128956ba61fb9188.png",
+    "static/media/charity-tree-preview.png": "/static/media/charity-tree-preview.986a31c48023d6fabf68.png",
     "static/media/epic-main.png": "/static/media/epic-main.64af66b622c87f7e8798.png",
     "static/media/headshot.png": "/static/media/headshot.1745c75341bb6b6fa15c.png",
-    "static/media/localify-preview.png": "/static/media/localify-preview.f7df8e5d566a9dee3c34.png",
+    "static/media/localify-preview.png": "/static/media/localify-preview.65e71e6a1bdb0481b267.png",
+    "static/media/poliquicks-preview.png": "/static/media/poliquicks-preview.e8953868ec34ac4a086c.png",
     "static/media/scared-cat-404.gif": "/static/media/scared-cat-404.12d8a556c48c421e5f4d.gif",
     "index.html": "/index.html",
-    "main.42cb276f.css.map": "/static/css/main.42cb276f.css.map",
-    "main.8e61536c.js.map": "/static/js/main.8e61536c.js.map",
+    "main.a7b10a37.css.map": "/static/css/main.a7b10a37.css.map",
+    "main.313558df.js.map": "/static/js/main.313558df.js.map",
     "453.1407b060.chunk.js.map": "/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.42cb276f.css",
-    "static/js/main.8e61536c.js"
+    "static/css/main.a7b10a37.css",
+    "static/js/main.313558df.js"
   ]
 }
