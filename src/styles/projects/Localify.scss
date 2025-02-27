@@ -9,6 +9,7 @@
 
   .project-header {
     text-align: center;
+    max-width: $max-screen-width;
     padding: 32px 0;
     background: linear-gradient(135deg, $primary, $secondary);
     color: $white;
@@ -34,6 +35,7 @@
     padding: 36px;
     margin-bottom: 32px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    max-width: $max-screen-width;
 
     h2 {
       border-bottom: 2px solid $primary;

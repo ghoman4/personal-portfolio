@@ -141,4 +141,26 @@
       }
     }
   }
+
+  .back-button {
+    position: absolute;
+    left: 15px;
+    top: calc($navbar-height + 15px);
+    background: $gray2;
+    width: 32px;
+    height: 32px;
+    border-radius: 32px;
+    padding: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    cursor: pointer;
+    color: $white;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+      background: darken($gray2, 10%);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+    }
+  }
 }

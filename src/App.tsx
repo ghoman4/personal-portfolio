@@ -58,7 +58,7 @@ const App: React.FC = () => {
                     path="/project/:projectTitle"
                     element={
                         <>
-                            <NavBar active={CurrentPage.PROJECTS} />
+                            <NavBar active={CurrentPage.PROJECTS} backButton={true}/>
                             <FloatingContact />
                             <ProjectManager />
                         </>

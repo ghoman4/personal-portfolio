@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../styles/components/NavBar.scss";
+import { ChevronLeft } from "@mui/icons-material";
 
 export enum CurrentPage {
     HOME = 'HOME',
@@ -11,10 +12,12 @@ export enum CurrentPage {
 
 type Props = {
     active?: CurrentPage;
+    backButton?: boolean;
 }
 
-const NavBar: React.FC<Props> = ({ active }) => {
+const NavBar: React.FC<Props> = ({ active, backButton }) => {
     const [menuOpen, setMenuOpen] = useState<boolean>(false);
+    const navigate = useNavigate();
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -24,7 +27,6 @@ const NavBar: React.FC<Props> = ({ active }) => {
         setMenuOpen(false);
     };
 
-    // Close the menu when clicking off of navbar (mobile only)
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
             const navbar = document.querySelector(".navbar__links");
@@ -46,12 +48,9 @@ const NavBar: React.FC<Props> = ({ active }) => {
     return (
         <nav className="navbar">
             <div className="container">
-                {/* Logo Section */}
                 <div className="navbar__logo">
                     <Link to="/">Griffin Homan</Link>
                 </div>
-
-                {/* Links Section */}
                 <div className={`navbar__links ${menuOpen ? "active" : ""}`}>
                     <Link
                         to="/"
@@ -82,12 +81,13 @@ const NavBar: React.FC<Props> = ({ active }) => {
                         Contact
                     </Link>
                 </div>
-
-                {/* Mobile Menu Icon */}
                 <div className="navbar__menu-icon" onClick={toggleMenu}>
                     {menuOpen ? "✖" : "☰"}
                 </div>
             </div>
+            {(backButton && (window.history.length > 1)) && (
+                <ChevronLeft className="back-button" onClick={() => navigate(-1)}/>
+            )}
         </nav>
     );
 };
