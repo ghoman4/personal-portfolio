@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import "../styles/pages/Projects.scss";
 import localifyImage from "../assets/localify-preview.png";
+import poliquicksImage from "../assets/poliquicks-preview.png";
 import charityTreeImage from "../assets/charity-tree-preview.png";
 
 interface SimpleProject {
@@ -28,6 +29,19 @@ const projects: SimpleProject[] = [
         style: "localify-text-glow"
     },
     {
+        id: "poliquicks",
+        name: "Poliquicks",
+        image: poliquicksImage,
+        stillWorking: true,
+        startDate: new Date(2025, 0),
+        keywords: [
+            "React Native",
+            "CSS",
+            "Typescript"
+        ],
+        style: "secondary-text-glow"
+    },
+    {
         id: "charity-tree",
         name: "Charity Tree",
         image: charityTreeImage,
@@ -36,20 +50,6 @@ const projects: SimpleProject[] = [
         endDate: new Date(2024, 4),
         keywords: ["Spring Boot", "Java", "JWT Auth."],
         style: "charity-tree-text-glow"
-    },
-    {
-        id: "localify",
-        name: "Localify.org",
-        image: localifyImage,
-        stillWorking: false,
-        startDate: new Date(2023, 0),
-        endDate: new Date(2023, 2),
-        keywords: [
-            "React",
-            "SCSS",
-            "TypeScript",
-        ],
-        style: "secondary-text-glow"
     },
 ];
 
@@ -91,7 +91,7 @@ const Projects: React.FC = () => {
                                     className="view-all-button"
                                     onClick={() => navigate(`/project/${project.id}`)}
                                 >
-                                    <h5>View All</h5>
+                                    <h5>View More</h5>
                                     <ChevronRightIcon />
                                 </button>
                             </div>
