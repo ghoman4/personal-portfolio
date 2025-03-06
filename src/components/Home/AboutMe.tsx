@@ -1,6 +1,6 @@
 import React from "react";
 import "../../styles/pages/Home.scss";
-import profileImage from "../../assets/profile-image.png";
+import profileImage from "../../assets/headshot.png";
 import {useNavigate} from "react-router-dom";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
