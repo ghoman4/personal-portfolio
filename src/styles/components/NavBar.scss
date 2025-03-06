@@ -5,7 +5,7 @@
   width: 100vw;
   display: flex;
   justify-content: center;
-  background-color: $background-light;
+  background-color: rgba(#000, 0.6);
   height: $navbar-height;
   position: sticky;
   top: 0;
@@ -57,7 +57,8 @@
 
       &.active,
       &:hover {
-        color: $primary;
+        color: $primary-light;
+        @include apply-glow("color", $primary-dark);
       }
 
       &::after {
@@ -65,10 +66,11 @@
         position: absolute;
         width: 0; // Initial width is 0
         height: 2px;
-        background: $primary;
+        background: $primary-light;
+        @include apply-glow("color", $primary-dark, $primary);
         bottom: -4px;
         left: 0;
-        transition: width 0.3s ease; // Animate the underline
+        transition: width 0.3s ease;
       }
 
       &:hover::after,
@@ -137,7 +139,7 @@
       }
 
       &:hover {
-        color: darken($primary-dark, 10%);
+        color: darken($primary-light, 10%);
       }
     }
   }
