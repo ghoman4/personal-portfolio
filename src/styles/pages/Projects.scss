@@ -111,7 +111,9 @@
     }
   }
 
-  @media(max-height: $medium-screen-width) {
-    padding: 0 $page-padding-small;
+  @media(max-width: $medium-screen-width) {
+    .container {
+      padding: 0 $page-padding-small;
+    }
   }
 }
