@@ -2,9 +2,11 @@
 
 .contact {
   display: flex;
+  align-items: center;
   justify-content: center;
+  height: calc(100vh - $navbar-height);
+  min-height: 600px;
   padding: 0 $page-padding-large;
-  margin: 50px 0 80px 0;
 
   &__container {
     max-width: 800px;
