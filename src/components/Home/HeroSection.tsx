@@ -17,7 +17,7 @@ const HeroSection: React.FC = () => {
                 <div className="button-container">
                     <button
                         className="hero__button"
-                        onClick={() => navigate("/contact")}
+                        onClick={() => navigate("/projects")}
                     >
                         View My Projects
                         <ChevronRightIcon/>
