@@ -4,7 +4,7 @@ import "../../styles/projects/Localify.scss";
 const Localify: React.FC = () => {
     return (
         <section className="localify-project-page">
-            <div>
+            <div className="container">
                 <header className="project-header">
                     <h1>Localify.org</h1>
                     <p className="tagline">

@@ -50,7 +50,7 @@ const projects: SimpleProject[] = [
         endDate: new Date(2024, 4),
         keywords: ["Spring Boot", "Java", "JWT Auth."],
         style: "charity-tree-text-glow"
-    },
+    }
 ];
 
 const Projects: React.FC = () => {
@@ -62,45 +62,47 @@ const Projects: React.FC = () => {
 
     return (
         <div className="projects">
-            <h1 className="title">Projects</h1>
-            <div className="card-container">
-                {projects.map((project, index) => {
-                    const startDate = formatter.format(project.startDate);
-                    const endDate = project.endDate
-                        ? formatter.format(project.endDate)
-                        : "Present";
+            <div className="container">
+                <h1 className="title">Projects</h1>
+                <div className="card-container">
+                    {projects.map((project, index) => {
+                        const startDate = formatter.format(project.startDate);
+                        const endDate = project.endDate
+                            ? formatter.format(project.endDate)
+                            : "Present";
 
-                    return (
-                        <div className="card" key={index}>
-                            <img
-                                src={project.image}
-                                alt={project.name}
-                                className="card__image"
-                            />
-                            <div className="card__text-container">
-                                <div>
-                                    <h3 className={`card__name ${project.style}`}>{project.name}</h3>
-                                    <p className="card__date">{`${startDate} - ${endDate}`}</p>
-                                    <ul className="card__languages">
-                                        {project.keywords.map((keyword, i) => (
-                                            <li key={i}>{keyword}</li>
-                                        ))}
-                                    </ul>
+                        return (
+                            <div className="card" key={index}>
+                                <img
+                                    src={project.image}
+                                    alt={project.name}
+                                    className="card__image"
+                                />
+                                <div className="card__text-container">
+                                    <div>
+                                        <h3 className={`card__name ${project.style}`}>{project.name}</h3>
+                                        <p className="card__date">{`${startDate} - ${endDate}`}</p>
+                                        <ul className="card__languages">
+                                            {project.keywords.map((keyword, i) => (
+                                                <li key={i}>{keyword}</li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                    <button
+                                        className="view-all-button"
+                                        onClick={() => navigate(`/project/${project.id}`)}
+                                    >
+                                        <h5>View More</h5>
+                                        <ChevronRightIcon/>
+                                    </button>
                                 </div>
-                                <button
-                                    className="view-all-button"
-                                    onClick={() => navigate(`/project/${project.id}`)}
-                                >
-                                    <h5>View More</h5>
-                                    <ChevronRightIcon />
-                                </button>
                             </div>
-                        </div>
-                    );
-                })}
+                        );
+                    })}
+                </div>
             </div>
         </div>
     );
-};
+}
 
 export default Projects;

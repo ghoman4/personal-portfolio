@@ -3,9 +3,17 @@
 .localify-project-page {
   display: flex;
   justify-content: center;
-  max-width: $max-screen-width;
-  padding: 0 $page-padding-large;
-  margin: 50px 0 80px 0;
+
+  width: 100%;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: $max-screen-width;
+    padding: 0 $page-padding-large;
+    margin: 50px 0 80px 0;
+  }
 
   .project-header {
     text-align: center;
