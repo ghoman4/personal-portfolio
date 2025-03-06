@@ -484,7 +484,7 @@
   .localify-button {
     color: $localify-light;
     border: 2px solid $localify;
-    @include apply-glow("background-color", $localify, $localify);
+    @include apply-glow("background-color", $localify);
 
     &:hover {
       @include apply-glow("background-color", $localify, $localify, $localify);
@@ -532,7 +532,7 @@
   }
 
   .view-all-button {
-    margin-top: 20px;
+    margin-top: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -543,6 +543,7 @@
     background: transparent;
     font-family: "Poppins", sans-serif;
     cursor: pointer;
+    transition: all 0.3s ease;
     @include apply-glow("border-color", $primary, $primary);
 
     h5 {
@@ -561,10 +562,5 @@
         transform: translateX(5px);
       }
     }
-  }
-
-  .coming-soon {
-    color: $gray2;
-    margin: 30px 0 70px 0;
   }
 }

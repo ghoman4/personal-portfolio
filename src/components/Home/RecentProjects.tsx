@@ -93,9 +93,6 @@ const RecentProjects: React.FC = () => {
             </div>
             */}
 
-            <h2
-                className="coming-soon"
-            >( More projects coming soon )</h2>
             <button
                 className="view-all-button"
                 onClick={() => navigate("/projects")}
