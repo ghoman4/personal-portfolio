@@ -9,18 +9,17 @@ const HeroSection: React.FC = () => {
     return (
         <section className="hero">
             <div className="container">
-                <div className="hero__content">
-                    <h2>Hey, I'm</h2>
-                    <h1>Griffin Homan</h1>
-                    <p>
-                        Full stack developer dedicated to designing and building innovative,
-                        scalable solutions that tackle real-world challenges.
-                    </p>
+                <h1>Griffin Homan</h1>
+                <p>
+                    Full stack computer science student dedicated to designing and building innovative,
+                    scalable solutions that tackle real-world challenges.
+                </p>
+                <div className="button-container">
                     <button
                         className="hero__button"
                         onClick={() => navigate("/contact")}
                     >
-                        Contact Me
+                        View My Projects
                         <ChevronRightIcon/>
                     </button>
                 </div>
