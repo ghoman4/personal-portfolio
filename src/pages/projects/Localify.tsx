@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/projects/ProjectPage.scss";
+import "../../styles/pages/ProjectPage.scss";
 
 const Localify: React.FC = () => {
     return (
