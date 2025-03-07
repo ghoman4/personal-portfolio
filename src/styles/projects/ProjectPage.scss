@@ -1,9 +1,8 @@
 @import "../../App.scss";
 
-.localify-project-page {
+.project-page {
   display: flex;
   justify-content: center;
-
   width: 100%;
 
   .container {
@@ -23,7 +22,6 @@
     color: $white;
     border-radius: 12px;
     margin-bottom: 32px;
-
 
     h1 {
       margin: 0;
@@ -61,7 +59,6 @@
     ul {
       list-style: none;
       padding: 0;
-
       li {
         background: $gray3;
         color: $white;
@@ -110,11 +107,30 @@
       text-align: center;
     }
   }
+
+  .links {
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 8px;
+        a {
+          color: $primary;
+          text-decoration: underline;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: $secondary;
+          }
+        }
+      }
+    }
+  }
 }
 
-// Responsive
 @media (max-width: $medium-screen-width) {
-  .localify-project-page {
+  .project-page {
     padding: 0 $page-padding-small;
 
     .project-header {
@@ -161,4 +177,3 @@
     }
   }
 }
-
