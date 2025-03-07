@@ -7,6 +7,7 @@
   height: calc(100vh - $navbar-height);
   min-height: 600px;
   padding: 0 $page-padding-large;
+  background: $background-dark;
 
   &__container {
     max-width: 800px;
@@ -16,28 +17,55 @@
   h1 {
     font-size: 48px;
     margin-bottom: 16px;
+    color: $primary-light;
+    @include apply-glow("color", $primary);
   }
 
   p {
     font-size: 1.2rem;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     line-height: 1.5;
   }
 
   &__icons {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 2.2rem;
 
     .contact__icon {
-      font-size: 2.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
       color: $white;
+      border-radius: 50%;
+      padding: 12px;
       cursor: pointer;
-      transition: transform 0.3s ease;
-      border-bottom: none;
+      transition: all 0.3s ease;
+
+      &:nth-child(1) {
+        @include apply-glow("border-color", $primary, $primary);
+        &:hover {
+          @include apply-glow("border-color", $primary, $primary, $primary);
+        }
+      }
+
+      &:nth-child(2) {
+        @include apply-glow("border-color", $secondary, $secondary);
+        &:hover {
+          @include apply-glow("border-color", $secondary, $secondary, $secondary);
+        }
+      }
+
+      &:nth-child(3) {
+        @include apply-glow("border-color", $charity-tree, $charity-tree);
+        &:hover {
+          @include apply-glow("border-color", $charity-tree, $charity-tree, $charity-tree);
+        }
+      }
 
       &:hover {
-        transform: scale(1.2);
+        transform: scale(1.02) translateY(-2px);
       }
     }
   }
