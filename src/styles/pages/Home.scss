@@ -482,7 +482,7 @@
   }
 
   .localify-button {
-    color: $localify-light;
+    color: $white;
     border: 2px solid $localify;
     @include apply-glow("background-color", $localify);
 
